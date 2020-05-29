@@ -1,0 +1,5 @@
+<div class="container">
+  <% @cocktails.each_slice(3) do |cocktails| %>
+    <%= render "cocktails/card_row", cocktails: cocktails %>
+  <% end %>
+</div>

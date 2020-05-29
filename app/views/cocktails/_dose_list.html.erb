@@ -1,0 +1,13 @@
+  <% cocktail.doses.each do |dose| %>
+  <div class="row">
+    <div class="col-12">
+      <div class="card-product mt-2 mb-2">
+        <div class="card-product-infos">
+          <h2><%= dose.ingredient.name %> <%= link_to "(Delete)", dose_path(dose), method: :delete %> </h2>
+          <p><%= dose.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+

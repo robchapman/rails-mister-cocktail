@@ -1,0 +1,9 @@
+  <% cocktail.reviews.each do |review| %>
+  <div class="row m-2">
+    <div class="col-12">
+      <p>
+        <%= review.content + " " + "#{review.rating} stars" %>
+      </p>
+    </div>
+  </div>
+  <% end %>

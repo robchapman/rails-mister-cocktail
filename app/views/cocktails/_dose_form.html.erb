@@ -1,0 +1,10 @@
+  <div class="row">
+    <div class="column">
+      <h3>Add a new Ingredient</h3>
+      <%= simple_form_for [cocktail, dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient, collection: Ingredient.all - @cocktail.ingredients %>
+        <%= f.submit "Add to cocktail", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>

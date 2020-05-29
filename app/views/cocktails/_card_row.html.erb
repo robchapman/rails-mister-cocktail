@@ -1,0 +1,17 @@
+  <div class="row">
+    <% cocktails.each do |cocktail| %>
+    <div class="col-4">
+      <div class="card-trip">
+        <img src="https://source.unsplash.com/300x200/?cocktail" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%=  link_to cocktail.name , cocktail_path(cocktail)%></h2>
+            <% avg_rating = cocktail.reviews.empty? ? "No ratings yet" : "Avg. rating: #{((cocktail.reviews.sum {|review| review.rating}) / cocktail.reviews.count.to_f ).to_s}" %>
+            <p><%= avg_rating %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
